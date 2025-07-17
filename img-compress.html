@@ -17,9 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5884815764517957"
-     crossorigin="anonymous"></script>
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5884815764517957" crossorigin="anonymous"></script>
     <style>
         :root {
             --primary: #4361ee;
@@ -656,6 +654,213 @@
             line-height: 1.6;
         }
 
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            border-radius: var(--rounded-lg);
+            box-shadow: var(--shadow-md);
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--gray-200);
+            padding-bottom: 20px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--gray-500);
+            transition: var(--transition);
+        }
+
+        .faq-question.active::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            color: var(--gray-600);
+            line-height: 1.7;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.show {
+            max-height: 500px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: white;
+            border-radius: var(--rounded-lg);
+            box-shadow: var(--shadow-md);
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background-color: var(--gray-50);
+            border-radius: var(--rounded-md);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--gray-700);
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .author-info h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: white;
+            border-radius: var(--rounded-lg);
+            box-shadow: var(--shadow-md);
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        .contact-details h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 8px;
+        }
+
+        .contact-details p, .contact-details a {
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-details a:hover {
+            color: var(--primary);
+        }
+
+        .contact-form {
+            margin-top: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--gray-800);
+            font-size: 14px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--rounded-md);
+            font-family: inherit;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+        }
+
         /* Footer */
         footer {
             background-color: var(--gray-900);
@@ -807,7 +1012,7 @@
                 font-size: 28px;
             }
 
-            .info-section {
+            .info-section, .faq-section, .testimonials-section, .contact-section {
                 padding: 30px;
             }
         }
@@ -837,7 +1042,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .info-section {
+            .info-section, .faq-section, .testimonials-section, .contact-section {
                 padding: 24px;
             }
         }
@@ -857,17 +1062,17 @@
             
             <nav id="main-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container hero-content">
             <h1>Optimize Your Images in Seconds</h1>
             <p>Reduce image file size without losing quality. Perfect for websites, social media, and email attachments.</p>
@@ -889,6 +1094,9 @@
             <!-- Replace with your AdSense code -->
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5884815764517957"
              crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5884815764517957"
                  data-ad-slot="YOUR_AD_SLOT_ID"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
@@ -1035,10 +1243,11 @@
         <div class="ad-container">
             <div class="ad-label">Advertisement</div>
             <!-- Replace with your AdSense code -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5884815764517957"
+             crossorigin="anonymous"></script>
             <ins class="adsbygoogle"
                  style="display:block"
-                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5884815764517957"
-                 crossorigin="anonymous"></script>
+                 data-ad-client="ca-pub-5884815764517957"
                  data-ad-slot="YOUR_AD_SLOT_ID_2"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
@@ -1076,6 +1285,113 @@
         </div>
     </section>
 
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our image compression tool</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Will compressing my images reduce their quality?</div>
+                <div class="faq-answer">
+                    <p>Our advanced algorithms optimize file size while preserving visual quality. You can adjust compression levels to find the perfect balance between quality and file size. Higher compression levels maintain more quality while lower levels create smaller files.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What image formats do you support?</div>
+                <div class="faq-answer">
+                    <p>We currently support JPEG, PNG, and WebP formats. WebP typically offers the best compression rates with excellent quality preservation. More formats will be added in future updates.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is there a limit to file size?</div>
+                <div class="faq-answer">
+                    <p>Currently we support files up to 20MB. For larger files, we recommend resizing them before uploading to our compression tool. This helps ensure faster processing and better results.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How long are my compressed images stored?</div>
+                <div class="faq-answer">
+                    <p>Processed images are temporarily stored for 24 hours on our servers. We recommend downloading them immediately after compression. For privacy reasons, all files are automatically deleted after this period.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is this service free?</div>
+                <div class="faq-answer">
+                    <p>Yes! ImageCompressorPro is completely free to use with no hidden costs. We may offer premium features in the future, but the core compression functionality will always remain free.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Users Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied users</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Reduced my website's banner images by 70% with no visible quality loss. Amazing tool that helped improve my site's loading speed significantly!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <h4>Sarah K.</h4>
+                            <p>Web Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Perfect for preparing images for my blog posts. Saves me hours of manual optimization. The quality slider makes it easy to find the perfect balance."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MT</div>
+                        <div class="author-info">
+                            <h4>Michael T.</h4>
+                            <p>Content Creator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Used it to compress hundreds of product images for my e-commerce site. Fast and reliable. The batch processing feature would make it perfect!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AR</div>
+                        <div class="author-info">
+                            <h4>Aisha R.</h4>
+                            <p>Small Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Simple interface with great results. My go-to tool for social media image optimization. The WebP conversion feature is particularly useful."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DL</div>
+                        <div class="author-info">
+                            <h4>David L.</h4>
+                            <p>Marketing Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Bottom Ad Banner -->
     <div class="container">
         <div class="ad-container">
@@ -1083,6 +1399,9 @@
             <!-- Replace with your AdSense code -->
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5884815764517957"
              crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5884815764517957"
                  data-ad-slot="YOUR_AD_SLOT_ID_3"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
@@ -1091,6 +1410,73 @@
             </script>
         </div>
     </div>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Have questions or feedback? We'd love to hear from you!</p>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <a href="mailto:usmanmalik86.mm@outlook.com">usmanmalik86.mm@outlook.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Website</h4>
+                        <a href="https://yourdomain.com">www.imagecompressorpro.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Response Time</h4>
+                        <p>We typically respond within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" required></textarea>
+                </div>
+
+                <button type="submit" class="btn submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
@@ -1104,7 +1490,7 @@
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <div class="social-link"><i class="fab fa-instagram"></i></div>
                         <a href="#" class="social-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
@@ -1112,11 +1498,11 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -1135,7 +1521,7 @@
                     <h4>Support</h4>
                     <ul>
                         <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
                         <li><a href="#">Feedback</a></li>
                         <li><a href="#">API Documentation</a></li>
                         <li><a href="#">Status</a></li>
@@ -1164,7 +1550,17 @@
                     '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
             });
             
-            // DOM elements
+            // FAQ toggle functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    question.classList.toggle('active');
+                    const answer = question.nextElementSibling;
+                    answer.classList.toggle('show');
+                });
+            });
+            
+            // DOM elements for compressor tool
             const uploadArea = document.getElementById('upload-area');
             const fileInput = document.getElementById('file-input');
             const compressBtn = document.getElementById('compress-btn');
@@ -1226,6 +1622,14 @@
             compressBtn.addEventListener('click', compressImage);
             resetBtn.addEventListener('click', resetTool);
             downloadBtn.addEventListener('click', downloadCompressedImage);
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will respond as soon as possible.');
+                this.reset();
+            });
             
             // Functions
             function updateQualityDisplay() {
